@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/ready/background">
+        <file>res/ready.jpg</file>
+        <file>res/label.jpg</file>
+    </qresource>
+    <qresource prefix="/edit/background">
+        <file>res/edit_background.jpg</file>
+        <file>res/1.jpg</file>
+    </qresource>
+</RCC>
