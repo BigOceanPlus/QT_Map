@@ -7,8 +7,7 @@ namespace Ui {
 class MyDialog;
 }
 
-class MyDialog : public QDialog
-{
+class MyDialog : public QDialog{
     Q_OBJECT
 
 signals:
@@ -18,7 +17,8 @@ public:
     ~MyDialog();
 
 private slots:
-    void on_pushButton1_clicked();
+    void on_pushButtonOk_clicked();
+
 private:
     Ui::MyDialog *ui;
 };

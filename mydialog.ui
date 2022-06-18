@@ -63,7 +63,7 @@ border-image:url(:/ready/background/res/ready.jpg);
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="lineEditUser"/>
          </item>
         </layout>
        </widget>
@@ -84,7 +84,7 @@ border-image:url(:/ready/background/res/ready.jpg);
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_2"/>
+          <widget class="QLineEdit" name="lineEditPwsd"/>
          </item>
         </layout>
        </widget>
@@ -147,7 +147,7 @@ border-image:url(:/ready/background/res/ready.jpg);
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="pushButton1">
+       <widget class="QPushButton" name="pushButtonOk">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -194,7 +194,7 @@ QPushButton::disabled{
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton2">
+       <widget class="QPushButton" name="pushButtonCancel">
         <property name="styleSheet">
          <string notr="true">/**正常情况下样式**/
 QPushButton{
@@ -242,7 +242,7 @@ QPushButton::disabled{
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton2</sender>
+   <sender>pushButtonCancel</sender>
    <signal>clicked()</signal>
    <receiver>MyDialog</receiver>
    <slot>reject()</slot>

@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     //设置窗口无边框
     setWindowFlags (Qt::FramelessWindowHint);
+
     //用绘图事件将窗口设置为圆角
     QBitmap bmp(this->size());
     bmp.fill();
@@ -35,13 +36,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->loadButton,&QPushButton::clicked,this,&MainWindow::on_loadButton_clicked);
     connect(ui->cancelButton,&QPushButton::clicked,this,[=](){this->close();delete ui;});
 }
-MainWindow::~MainWindow()
-{
+
+MainWindow::~MainWindow(){
     delete ui;
 }
 
-void MainWindow::on_loadButton_clicked()
-{
+void MainWindow::on_loadButton_clicked(){
     if(Qmap.contains(ui->line1->text()) && ui->line2->text() == Qmap[ui->line1->text()]){
 
         x=new MapEditor;
@@ -74,8 +74,7 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event){
     }
 }
 
-void MainWindow::on_registerButton_clicked()
-{
+void MainWindow::on_registerButton_clicked(){
     MyDialog* dlgLocate;
     dlgLocate = new MyDialog(this);
     dlgLocate->setAttribute(Qt::WA_DeleteOnClose); //对话框关闭时自动删除对话框对象,用于不需要读取返回值的对话框

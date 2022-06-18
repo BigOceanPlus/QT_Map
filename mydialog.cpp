@@ -1,6 +1,6 @@
 #include "mydialog.h"
 #include "ui_mydialog.h"
-#include<QPushButton>
+#include <QPushButton>
 MyDialog::MyDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MyDialog)
@@ -14,9 +14,7 @@ MyDialog::~MyDialog()
     delete ui;
 }
 
-
-void MyDialog::on_pushButton1_clicked()
-{
-    emit request(ui->lineEdit->text(),ui->lineEdit_2->text());
+void MyDialog::on_pushButtonOk_clicked(){
+    emit request(ui->lineEditUser->text(),ui->lineEditPwsd->text());
     this->accept();
 }
